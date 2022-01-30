@@ -55,7 +55,10 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.resolve(__dirname,'client','build','index.html'));
     })
 }
-
+app.get('/',(req,res)=>{
+    res.send("HEllo WOrld");
+})
 app.listen(Port,()=>{
     console.log("Server is running on port 3001");
+
 })
